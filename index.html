@@ -20,34 +20,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: radial-gradient(ellipse at top, #0a1628 0%, #000 70%);
-            color: #fff;
+            background: #fff;
+            color: #222;
             padding: 20px;
             overflow-x: hidden;
         }
 
-        /* Animated background particles */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background:
-                radial-gradient(2px 2px at 20% 30%, rgba(59,130,246,0.3), transparent),
-                radial-gradient(2px 2px at 80% 20%, rgba(59,130,246,0.2), transparent),
-                radial-gradient(2px 2px at 40% 70%, rgba(59,130,246,0.15), transparent),
-                radial-gradient(2px 2px at 90% 80%, rgba(59,130,246,0.2), transparent),
-                radial-gradient(2px 2px at 10% 90%, rgba(59,130,246,0.1), transparent),
-                radial-gradient(2px 2px at 60% 50%, rgba(59,130,246,0.2), transparent);
-            animation: twinkle 4s ease-in-out infinite alternate;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        @keyframes twinkle {
-            0% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
 
         .container {
             text-align: center;
@@ -107,12 +85,12 @@
             padding: 14px 20px;
             border-radius: 14px;
             text-decoration: none;
-            color: #fff;
+            color: #222;
             font-size: 0.95rem;
             font-weight: 600;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(255,255,255,0.06);
-            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(0,0,0,0.1);
+            background: #f8f9fa;
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
@@ -133,8 +111,8 @@
 
         .link-btn:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            border-color: rgba(255,255,255,0.12);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: rgba(0,0,0,0.15);
         }
 
         .link-btn .icon {
@@ -159,7 +137,7 @@
         .link-btn .text span {
             display: block;
             font-size: 0.7rem;
-            color: #94a3b8;
+            color: #666;
             font-weight: 400;
             margin-top: 2px;
         }
@@ -176,7 +154,7 @@
         /* Divider */
         .divider {
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(59,130,246,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
             margin: 8px 0 28px;
         }
 
@@ -261,14 +239,6 @@
                 </div>
                 <div class="text">TikTok Shop <span>Official Store</span></div>
             </a>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- QR Code -->
-        <div class="qr-section">
-            <p class="section-label">Scan QR Code</p>
-            <div id="qrcode"></div>
         </div>
 
         <p class="footer">CLYDE PREMIUM SHOE CLEANER</p>
